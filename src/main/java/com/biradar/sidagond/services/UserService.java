@@ -6,11 +6,15 @@ import com.biradar.sidagond.dto.UserDto;
 import com.biradar.sidagond.model.User;
 
 public interface UserService {
-	
+
 	public User createUser(UserDto userDto);
-	public User updateUser(UserDto userDto);
-	public User getUserById(Integer userId);
+
+	public User updateUser(UserDto userDto, Integer userId) throws Exception;
+
+	public User getUserById(Integer userId) throws Exception;
+
 	public List<User> getAllUsers();
-	public void deleteById(Integer userId);
+
+	public void deleteById(Integer userId) throws Exception;
 
 }
